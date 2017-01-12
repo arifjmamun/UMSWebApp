@@ -87,6 +87,7 @@
     <Content Include="Bootstrap\js\jquery-3.1.1.min.js" />
     <Content Include="Bootstrap\js\moment.min.js" />
     <Content Include="Bootstrap\js\npm.js" />
+    <Content Include="Images\UMSBanner.png" />
     <Content Include="UI\StudentEntry.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

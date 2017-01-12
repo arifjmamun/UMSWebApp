@@ -1,6 +1,5 @@
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\bin\UMSWebApp.dll.config
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\bin\UMSWebApp.dll
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\bin\UMSWebApp.pdb
-H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.csprojResolveAssemblyReference.cache
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.dll
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.pdb

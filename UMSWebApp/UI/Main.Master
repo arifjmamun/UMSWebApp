@@ -13,8 +13,10 @@
 </head>
 <body>
     <div class="container" id="wrapper">
-        <div class="page-header">
-            <h1>UMS | University Management System</h1>
+        <div class="row">
+            <div class="page-header">
+                <img src="../Images/UMSBanner.png" width="100%" height="auto" alt="Banner Image" />
+            </div>
         </div>
         <form id="form1" runat="server">
             <div>
@@ -22,7 +24,19 @@
                 </asp:ContentPlaceHolder>
             </div>
         </form>
+        <!--Footer Part-->
+        <div id="push"></div>
+        <div id="footer">
+            <div id="content">
+                All &copy;Copyrights 2016-2017 reserved by UMS.                
+            </div>
+            <span>Developed by
+                <a target="_blank" href="https://www.fb.com/arifj.mamun">Arif | BASIS</a>
+            </span>
+        </div>
+        <!--End Footer Part-->
     </div>
+
     <script src="../Bootstrap/js/jquery-3.1.1.min.js"></script>
     <script src="../Bootstrap/js/moment.min.js"></script>
     <script src="../Bootstrap/js/daterangepicker.js"></script>
