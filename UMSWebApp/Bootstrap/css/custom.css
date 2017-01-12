@@ -39,7 +39,9 @@ body {
     text-decoration: none;
     color: #00FFBA;
 }
-
+.btn-space {
+    margin-right: 5px;
+}
 #camera{
     min-height: 300px;
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace UMSWebApp.UI
 {
-    public partial class StudentEntry : System.Web.UI.Page
+    public partial class StudentEntry : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
