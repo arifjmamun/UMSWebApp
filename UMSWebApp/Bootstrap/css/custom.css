@@ -1,0 +1,167 @@
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    min-height:100%;
+    position:relative;
+    background-color: #eee;
+}
+
+#content {
+    /*padding-bottom:50px; !* Height of the footer element *!*/
+    padding: 0 10px;
+}
+#push{
+    margin-bottom: 50px;
+}
+#footer {
+    background:#456F9C;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    width: 100%;
+    height:50px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.page-header{
+    margin: 0;
+}
+#content span{
+    font-size: 10px;
+}
+#content span a{
+    text-decoration: none;
+    color: #00FFBA;
+}
+
+#camera{
+    min-height: 300px;
+}
+#info{
+    min-height: 270px;
+}
+#info p{
+    font-weight: 600;
+}
+p#status{
+    font-size: 25px;
+}
+#camera{
+    background-color: transparent;
+    z-index: 999;
+}
+.status-para{
+    font-size: 17px;
+    font-weight: 600;
+}
+hr{
+    border: 1px black solid;
+}
+
+#byYear{
+    margin-bottom: 5px;
+}
+
+#status-table{
+    background-color: transparent;
+}
+
+.viewprofile h4{
+    margin: 5px;
+}
+.viewprofile .points{
+    text-align: right;
+    font-weight: 700;
+}
+.img-container{
+    background-color:white;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+textarea{
+    resize: vertical;
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #login-panel{
+        margin-top: 10px;
+    }
+    #editProfile{
+        margin-bottom: 70px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #login-panel{
+        margin-top: 10px;
+    }
+    #editProfile{
+        margin-bottom: 70px;
+    }
+    #loginPanelFooter{
+        padding-left: 197px;
+    }
+}
+hr {
+    border: 1px grey dashed;
+}
+#navigation a:hover{
+    background: #333;
+    color: #f1f1f1;
+}
+.navbar-brand{
+    color: #f1f1f1;
+    background: #444;
+}
+
+.required{
+    color: red;
+    font-size: 1.6em;
+    top: 0.25em;
+    position: absolute;
+}
+
+#passwordField{
+  cursor: pointer;
+}
+
+#sameAsPre{
+    display: flex;
+    font-size: 70%;
+}
+
+.no-margin-bottom{
+    margin-bottom: 0;
+}
+.pointer{
+    cursor: pointer;
+}
+.edit{
+    margin-right: 5px;
+}
+
+/*Image upload styles*/
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
+
+/*End Image upload styles*/
+

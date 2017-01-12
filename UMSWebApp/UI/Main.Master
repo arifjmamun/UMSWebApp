@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="UMSWebApp.UI.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>UMS | University Management System</title>
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Bootstrap/css/daterangepicker.css" rel="stylesheet" />
+    <link href="../Bootstrap/css/custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container" id="wrapper">
+        <div class="page-header">
+            <h1>UMS | University Management System</h1>
+        </div>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="bodyContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+    <script src="../Bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="../Bootstrap/js/moment.min.js"></script>
+    <script src="../Bootstrap/js/daterangepicker.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="scriptContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
