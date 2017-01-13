@@ -52,5 +52,6 @@ namespace UMSWebApp.BLL
         {
             return _studentGateway.GetAllStudentRegNo();
         }
+
     }
 }

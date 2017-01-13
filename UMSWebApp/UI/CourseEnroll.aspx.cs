@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using UMSWebApp.BLL;
+using UMSWebApp.Model;
 
 namespace UMSWebApp.UI
 {
@@ -12,6 +13,7 @@ namespace UMSWebApp.UI
     {
         StudentManager _studentManager = new StudentManager();
         CourseManager _courseManager =new CourseManager();
+        StudentCourseManager _studentCourseManager = new StudentCourseManager();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,10 +27,18 @@ namespace UMSWebApp.UI
 
         protected void enrollButton_Click(object sender, EventArgs e)
         {
-
+            EnrollCourse();
         }
 
-
+        private void EnrollCourse()
+        {
+            int studentId = Convert.ToInt32(studentRegNoDropDownList.SelectedValue);
+            int courseId = Convert.ToInt32(coursesDropDownList.SelectedValue);
+            string enrollDate = enrollDateTextBox.Text;
+            StudentCourse studentCourse = new StudentCourse(studentId, courseId, enrollDate);
+            msgLabel.Text = _studentCourseManager.AddStudentCourse(studentCourse);
+        }
+        
         private void LoadAllCourses()
         {
             coursesDropDownList.DataSource = _courseManager.GetAllCourses();

@@ -96,14 +96,17 @@
   <ItemGroup>
     <Compile Include="BLL\CourseManager.cs" />
     <Compile Include="BLL\DepartmentManager.cs" />
+    <Compile Include="BLL\StudentCourseManager.cs" />
     <Compile Include="BLL\StudentManager.cs" />
     <Compile Include="DAL\CourseGateway.cs" />
     <Compile Include="DAL\DBconnection.cs" />
     <Compile Include="DAL\DepartmentGateway.cs" />
+    <Compile Include="DAL\StudentCourseGateway.cs" />
     <Compile Include="DAL\StudentGateway.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Department.cs" />
     <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\StudentCourse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\CourseEnroll.aspx.cs">
       <DependentUpon>CourseEnroll.aspx</DependentUpon>
