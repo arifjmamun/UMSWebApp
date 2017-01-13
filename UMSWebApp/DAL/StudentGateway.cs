@@ -135,5 +135,33 @@ namespace UMSWebApp.DAL
                 Connection.Close();
             }
         }
+
+        public List<Student> GetAllStudentRegNo()
+        {
+            try
+            {
+                List<Student> students = new List<Student>();
+                const string query = @"SELECT Id, RegNo FROM Student";
+                Connection.Open();
+                Command.CommandText = query;
+                Reader = Command.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        int id = (int)Reader["Id"];
+                        string regNo = Reader["RegNo"].ToString();
+                        Student student = new Student(id,regNo);
+                        students.Add(student);
+                    }
+                    Reader.Close();
+                }
+                return students;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
     }
 }

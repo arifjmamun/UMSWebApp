@@ -96,8 +96,6 @@
             </div>
         </div>
     </div>
-
-
 </asp:Content>
 
 <asp:Content runat="server" ID="script" ContentPlaceHolderID="scriptContent">

@@ -47,5 +47,10 @@ namespace UMSWebApp.BLL
             if (updatedRow > 0) return "Student Info Updated.";
             return "Student info not updated";
         }
+
+        public List<Student> GetAllStudentRegNo()
+        {
+            return _studentGateway.GetAllStudentRegNo();
+        }
     }
 }

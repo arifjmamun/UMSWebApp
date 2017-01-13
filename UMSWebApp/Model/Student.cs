@@ -22,5 +22,11 @@ namespace UMSWebApp.Model
             Address = address;
             DepartmentId = departmentId;
         }
+
+        public Student(int id, string regNo)
+        {
+            Id = id;
+            RegNo = regNo;
+        }
     }
 }
