@@ -11,5 +11,19 @@ namespace UMSWebApp.Model
         public string Title { get; set; }
         public string Code { get; set; }
         public decimal Credit { get; set; }
+
+        //used for set
+        public Course(string title, string code, decimal credit)
+        {
+            Title = title;
+            Code = code;
+            Credit = credit;
+        }
+
+        //used for get
+        public Course()
+        {
+            
+        }
     }
 }
