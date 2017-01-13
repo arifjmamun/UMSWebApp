@@ -3,3 +3,4 @@ H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\bin\UMSWebApp.d
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\bin\UMSWebApp.pdb
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.dll
 H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.pdb
+H:\BASIS\Personal\DB and Layer Arch Practice\UMSWebApp\UMSWebApp\obj\Debug\UMSWebApp.csprojResolveAssemblyReference.cache

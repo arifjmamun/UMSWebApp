@@ -85,7 +85,6 @@ namespace UMSWebApp.DAL
                 Reader = Command.ExecuteReader();
                 if (Reader.HasRows)
                 {
-                    int serial = 0;
                     while (Reader.Read())
                     {
                         Course course = new Course();
@@ -98,6 +97,57 @@ namespace UMSWebApp.DAL
                     Reader.Close();
                 }
                 return courses;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public Course GetCourseById(int courseId)
+        {
+            try
+            {
+                Course course = null;
+                const string query = @"SELECT * FROM Course WHERE Id = @CourseId";
+                Connection.Open();
+                Command.CommandText = query;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@CourseId", courseId);
+                Reader = Command.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    if (Reader.Read())
+                    {
+                        string code = Reader["Code"].ToString();
+                        string title = Reader["Title"].ToString();
+                        decimal credit = (decimal)Reader["Credit"];
+                        course = new Course(title,code,credit);
+                        Reader.Close();
+                    }
+                }
+                return course;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public int UpdateCourse(Course course)
+        {
+            try
+            {
+                const string query = @"UPDATE Course SET Code = @Code, Title = @Title, Credit = @Credit WHERE Id = @CourseId";
+                Connection.Open();
+                Command.CommandText = query;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@CourseId", course.Id);
+                Command.Parameters.AddWithValue("@Code", course.Code);
+                Command.Parameters.AddWithValue("@Title", course.Title);
+                Command.Parameters.AddWithValue("@Credit", course.Credit);
+                int updatedRow = Command.ExecuteNonQuery();
+                return updatedRow;
             }
             finally
             {

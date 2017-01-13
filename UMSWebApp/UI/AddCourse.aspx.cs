@@ -14,7 +14,13 @@ namespace UMSWebApp.UI
         CourseManager _courseManager = new CourseManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["Id"] != null)
+                {
+                    ShowCourseById();
+                }
+            }
         }
 
         protected void addButton_Click(object sender, EventArgs e)
@@ -32,6 +38,8 @@ namespace UMSWebApp.UI
                 }
                 else
                 {
+                    int courseId = (int) ViewState["CourseId"];
+                    course.Id = courseId;
                     msgLabel.Text = _courseManager.UpdateCourse(course);
                     ResetFields();
 
@@ -56,12 +64,35 @@ namespace UMSWebApp.UI
             courseTtileTextBox.Text = String.Empty;
             courseCodeTextBox.Text = String.Empty;
             courseCreditTextBox.Text = String.Empty;
+            if (ViewState["CourseId"] != null) ViewState.Remove("CourseId");
         }
 
         private void ShowAllStudents()
         {
             courseGridView.DataSource = _courseManager.GetAllCourseInfo();
             courseGridView.DataBind();
+        }
+
+        private void ShowCourseById()
+        {
+            int courseId = Convert.ToInt32(Request.QueryString["Id"]);
+            Course course = _courseManager.GetCourseById(courseId);
+            if (course != null)
+            {
+                courseCodeTextBox.Text = course.Code;
+                courseTtileTextBox.Text = course.Title;
+                courseCreditTextBox.Text = course.Credit.ToString("F");
+                addButton.Text = "Update";
+                if (ViewState["CourseId"] == null)
+                {
+                    ViewState["CourseId"] = courseId;
+                }
+                else
+                {
+                    ViewState.Remove("CourseId");
+                    ViewState["CourseId"] = courseId;
+                }
+            }
         }
     }
 }

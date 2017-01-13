@@ -64,7 +64,7 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Action">
                                         <ItemTemplate>
-                                            <asp:HyperLink runat="server" NavigateUrl='<%#String.Format("StudentEntry.aspx?regNo={0}",Eval("Id")) %>'><span class="label label-info"> Edit</span></asp:HyperLink>
+                                            <asp:HyperLink runat="server" NavigateUrl='<%#String.Format("AddCourse.aspx?Id={0}",Eval("Id")) %>'><span class="label label-info"> Edit</span></asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

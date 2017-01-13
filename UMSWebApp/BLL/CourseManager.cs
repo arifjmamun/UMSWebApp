@@ -36,12 +36,19 @@ namespace UMSWebApp.BLL
 
         internal string UpdateCourse(Course course)
         {
-            throw new NotImplementedException();
+            int updatedRow = _courseGateway.UpdateCourse(course);
+            if (updatedRow > 0) return "Course Updated.";
+            return "Course not updated";
         }
 
         public List<Course> GetAllCourseInfo()
         {
             return _courseGateway.GetAllCourseInfo();
+        }
+
+        public Course GetCourseById(int courseId)
+        {
+            return _courseGateway.GetCourseById(courseId);
         }
     }
 }
