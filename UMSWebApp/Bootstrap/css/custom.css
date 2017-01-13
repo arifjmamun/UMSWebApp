@@ -9,7 +9,9 @@ body {
     position:relative;
     background-color: #eee;
 }
-
+.msg {
+    font-size: 12px;
+}
 #content {
     /*padding-bottom:50px; !* Height of the footer element *!*/
     padding: 0 10px;

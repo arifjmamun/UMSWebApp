@@ -1,3 +1,4 @@
+
 CREATE DATABASE UMSDB
 use UMSDB
 CREATE TABLE Department(
@@ -33,3 +34,4 @@ EnrollDate date NOT NULL,
 CONSTRAINT fk_StudentCourse_Student FOREIGN KEY(StudentId) REFERENCES Student(Id),
 CONSTRAINT fk_StudentCourse_Course FOREIGN KEY(CourseId) REFERENCES Course(Id)
 )
+ 

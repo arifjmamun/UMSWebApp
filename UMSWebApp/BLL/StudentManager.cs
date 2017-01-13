@@ -35,5 +35,17 @@ namespace UMSWebApp.BLL
         {
             return _studentGateway.GetAllStudents();
         }
+
+        public Student GetStudentByRegNo(string regNo)
+        {
+            return _studentGateway.GetStudentByRegNo(regNo);
+        }
+
+        public string UpdateStudent(Student student)
+        {
+            int updatedRow = _studentGateway.UpdateStudent(student);
+            if (updatedRow > 0) return "Student Info Updated.";
+            return "Student info not updated";
+        }
     }
 }

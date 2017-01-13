@@ -8,7 +8,9 @@
         <div class="col-md-offset-1 col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Student Entry</h3>
+                    <h3 class="panel-title">Student Entry 
+                        <asp:Label runat="server" ID="msgLabel" CssClass="pull-right msg"></asp:Label>
+                    </h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -54,12 +56,10 @@
                                 <%--Buttons--%>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <asp:Button CssClass="btn btn-default pull-right" runat="server" ID="showButton" Text="Show" OnClick="showButton_Click" />&nbsp;&nbsp;&nbsp; 
-                                    <asp:Button CssClass="btn btn-default pull-right btn-space" runat="server" ID="saveButton" Text="Save" OnClick="saveButton_Click" />
+                                        <asp:Button CssClass="btn btn-default pull-right" runat="server" ID="showButton" Text="Show" OnClick="showButton_Click" />
+                                        <asp:Button CssClass="btn btn-info pull-right btn-space" runat="server" ID="saveButton" Text="Save" OnClick="saveButton_Click" />
                                     </div>
                                 </div>
-                                <small>
-                                    <asp:Label runat="server" ID="msgLabel"></asp:Label></small>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Action">
                                         <ItemTemplate>
-                                            <asp:HyperLink runat="server" NavigateUrl='<%#String.Format("StudentEntry.aspx?regNo={0}",Eval("RegNo")) %>'>Edit</asp:HyperLink>
+                                            <asp:HyperLink runat="server" NavigateUrl='<%#String.Format("StudentEntry.aspx?regNo={0}",Eval("RegNo")) %>'><span class="label label-info"> Edit</span></asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

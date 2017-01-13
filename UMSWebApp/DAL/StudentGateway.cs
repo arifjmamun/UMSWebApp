@@ -81,5 +81,59 @@ namespace UMSWebApp.DAL
                 Connection.Close();
             }
         }
+
+        public Student GetStudentByRegNo(string regNo)
+        {
+            try
+            {
+                Student student = null;
+                const string query = @"SELECT * FROM Student WHERE RegNo = @RegNumber";
+                Connection.Open();
+                Command.CommandText = query;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@RegNumber", regNo);
+                Reader = Command.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    if (Reader.Read())
+                    {
+                        string name = Reader["Name"].ToString();
+                        string regNum = Reader["RegNo"].ToString();
+                        string phoneNo = Reader["PhoneNo"].ToString();
+                        string address = Reader["Address"].ToString();
+                        int departmentId = (int)Reader["DepartmentId"];
+                        student = new Student(name,regNum,phoneNo,address,departmentId);
+                        Reader.Close();
+                    }
+                }
+                return student;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+        public int UpdateStudent(Student student)
+        {
+            try
+            {
+                const string query = @"UPDATE Student SET Name=@Name, PhoneNo=@PhoneNo, Address=@Address, DepartmentId=@DepartmentId WHERE RegNo=@RegNo";
+                Connection.Open();
+                Command.CommandText = query;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@Name", student.Name);
+                Command.Parameters.AddWithValue("@PhoneNo", student.PhoneNo);
+                Command.Parameters.AddWithValue("@Address", student.Address);
+                Command.Parameters.AddWithValue("@DepartmentId", student.DepartmentId);
+                Command.Parameters.AddWithValue("@RegNo", student.RegNo);
+                int updatedRow = Command.ExecuteNonQuery();
+                return updatedRow;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
     }
 }
